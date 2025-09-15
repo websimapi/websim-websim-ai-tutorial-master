@@ -1,0 +1,106 @@
+{
+  "database": {
+    "schema": {
+      "tutorial_steps": {
+        "id": {
+          "type": "uuid",
+          "description": "Unique identifier for tutorial step"
+        },
+        "step_number": {
+          "type": "integer",
+          "description": "Sequential step number"
+        },
+        "action_type": {
+          "type": "text",
+          "description": "Type of action (click, navigate, type, etc.)"
+        },
+        "target_element": {
+          "type": "text",
+          "description": "CSS selector or description of target"
+        },
+        "description": {
+          "type": "text",
+          "description": "Human readable description of the step"
+        },
+        "screenshot_url": {
+          "type": "text",
+          "description": "URL of screenshot when step was created"
+        },
+        "success": {
+          "type": "boolean",
+          "description": "Whether the step was executed successfully"
+        }
+      },
+      "ai_learnings": {
+        "id": {
+          "type": "uuid",
+          "description": "Unique identifier for learning entry"
+        },
+        "page_type": {
+          "type": "text",
+          "description": "Type of page (homepage, project, editor, etc.)"
+        },
+        "url": {
+          "type": "text",
+          "description": "URL where learning occurred"
+        },
+        "elements": {
+          "type": "jsonb",
+          "description": "Array of UI elements discovered"
+        },
+        "thoughts": {
+          "type": "text",
+          "description": "AI's analysis and thoughts"
+        },
+        "screenshot_url": {
+          "type": "text",
+          "description": "Screenshot analyzed by AI"
+        },
+        "content_summary": {
+          "type": "text",
+          "description": "Summary of page content in text mode"
+        },
+        "interactive_elements": {
+          "type": "jsonb",
+          "description": "Interactive elements found on page"
+        },
+        "mode": {
+          "type": "text",
+          "description": "Analysis mode (image or text)"
+        },
+        "confidence_score": {
+          "type": "numeric",
+          "description": "AI confidence in analysis (0-1)"
+        }
+      },
+      "ui_patterns": {
+        "id": {
+          "type": "uuid",
+          "description": "Unique identifier for UI pattern"
+        },
+        "pattern_name": {
+          "type": "text",
+          "description": "Name of the UI pattern"
+        },
+        "css_selector": {
+          "type": "text",
+          "description": "CSS selector for this pattern"
+        },
+        "element_type": {
+          "type": "text",
+          "description": "Type of element (button, link, form, etc.)"
+        },
+        "action_context": {
+          "type": "text",
+          "description": "When/how this element should be used"
+        },
+        "success_rate": {
+          "type": "numeric",
+          "description": "Success rate of interactions with this pattern"
+        }
+      }
+    },
+    "instructions": "This database stores AI learning data for WebSim tutorial generation. The AI analyzes screenshots and page content to build understanding of the WebSim interface. Tutorial steps track the learning process, while ui_patterns stores reusable interaction patterns discovered by the AI."
+  }
+}
+

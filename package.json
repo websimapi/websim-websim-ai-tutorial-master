@@ -1,0 +1,21 @@
+{
+  "name": "websim-tutorial-server",
+  "version": "1.0.0",
+  "description": "Node.js server for WebSim AI Tutorial system",
+  "main": "websim-tutorial-server.js",
+  "scripts": {
+    "start": "node websim-tutorial-server.js",
+    "dev": "nodemon websim-tutorial-server.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.5.0",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["websim", "ai", "tutorial", "automation"],
+  "author": "WebSim AI Tutorial System",
+  "license": "MIT"
+}
+
